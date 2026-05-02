@@ -628,21 +628,20 @@
 
     <script>
         const AD_URL = 'https://daubwhereupon.com/cx2v5c2t?key=9286a8b4d9b76293b6e39f34031ec983';
-        let adClicks = 0;
 
         document.addEventListener('click', function (e) {
             const btn = e.target.closest('.download-btn');
             if (!btn) return;
 
-            e.preventDefault();
-            adClicks++;
-            window.open(AD_URL, '_blank');
+            let clicks = parseInt(btn.getAttribute('data-clicks') || '0');
+            clicks++;
 
-            if (adClicks >= 3) {
-                adClicks = 0;
-                setTimeout(() => {
-                    window.open('script-unlocked.html', '_blank');
-                }, 1000);
+            if (clicks < 3) {
+                e.preventDefault();
+                btn.setAttribute('data-clicks', clicks);
+                window.open(AD_URL, '_blank');
+            } else {
+                btn.setAttribute('data-clicks', 0);
             }
         });
     </script>
