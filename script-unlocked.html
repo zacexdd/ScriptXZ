@@ -276,7 +276,7 @@
                 <p class="note">▶ Supports Most Popular Scripts</p>
             </div>
         </div>
-        <a href="https://deltaexploits.gg/" target="_blank" class="download-btn">
+        <a href="https://deltaexploits.gg/" class="download-btn" onclick="handleClick(event, this)">
             <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
             Download Executor</a>
     </div>
@@ -293,8 +293,7 @@
                 <p class="note">▶ Infinite Farm & Progress</p>
             </div>
         </div>
-        <a href="https://cheater.fun/hacks_roblox/14763-kick-a-lucky-block-script.html" target="_blank"
-            class="download-btn">
+        <a href="https://cheater.fun/hacks_roblox/14763-kick-a-lucky-block-script.html" class="download-btn" onclick="handleClick(event, this)">
             More Scripts</a>
     </div>
 
@@ -310,7 +309,7 @@
                 <p class="note">▶ Become Max Level Fast</p>
             </div>
         </div>
-        <a href="https://sailorpiecescript.com/" target="_blank" class="download-btn">
+        <a href="https://sailorpiecescript.com/" class="download-btn" onclick="handleClick(event, this)">
             More Scripts</a>
     </div>
 
@@ -326,8 +325,7 @@
                 <p class="note">▶ Climb Ranks & Unlock Weapons</p>
             </div>
         </div>
-        <a href="https://www.tenorshare.com/change-location/roblox-rivals-hacks.html" target="_blank"
-            class="download-btn">
+        <a href="https://www.tenorshare.com/change-location/roblox-rivals-hacks.html" class="download-btn" onclick="handleClick(event, this)">
             More Scripts</a>
     </div>
 
@@ -343,7 +341,7 @@
                 <p class="note">▶ Instant Pet Preview</p>
             </div>
         </div>
-        <a href="https://growagardenpetspawnerscript.com/" target="_blank" class="download-btn">
+        <a href="https://growagardenpetspawnerscript.com/" class="download-btn" onclick="handleClick(event, this)">
             More Scripts</a>
     </div>
 
@@ -376,7 +374,7 @@
                 <p class="note">▶ Top 1 Script</p>
             </div>
         </div>
-        <a href="https://gardenhorizonsscript.com/" target="_blank" class="download-btn">
+        <a href="https://gardenhorizonsscript.com/" class="download-btn" onclick="handleClick(event, this)">
             More Scripts</a>
     </div>
 
@@ -413,23 +411,26 @@
     </footer>
 
     <script>
-        const AD_URL = 'https://daubwhereupon.com/cx2v5c2t?key=9286a8b4d9b76293b6e39f34031ec983';
+        const AD_URL = 'https://www.profitablecpmratenetwork.com/g1ehiyzdc0?key=9f9e3902ce0c050ece2f758edf2d8a2e';
 
-        document.addEventListener('click', function (e) {
-            const btn = e.target.closest('.download-btn');
-            if (!btn) return;
+        function handleClick(e, btn) {
+            e.preventDefault();
 
-            let clicks = parseInt(btn.getAttribute('data-clicks') || '0');
+            let key = "clicks_" + btn.href;
+            let clicks = parseInt(localStorage.getItem(key) || "0");
             clicks++;
+            localStorage.setItem(key, clicks);
 
-            if (clicks < 3) {
-                e.preventDefault();
-                btn.setAttribute('data-clicks', clicks);
-                window.open(AD_URL, '_blank');
-            } else {
-                btn.setAttribute('data-clicks', 0);
+            window.open(AD_URL, "_blank");
+
+            if (clicks >= 3) {
+                localStorage.removeItem(key);
+
+                setTimeout(() => {
+                    window.location.href = btn.href;
+                }, 300);
             }
-        });
+        }
     </script>
 
     <script>
