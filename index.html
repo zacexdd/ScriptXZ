@@ -414,7 +414,7 @@
                     <p class="note">▶ Infinite Farm & Progress</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -431,7 +431,7 @@
                     <p class="note">▶ Fast Level, Beli & Drop Farm</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -449,7 +449,7 @@
                     <p class="note">▶ Smooth & Optimized Performance</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -469,7 +469,7 @@
                     <p class="note">▶ ESP & Teleport Utilities</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -486,7 +486,7 @@
                     <p class="note">▶ Instant Pet Preview</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" target="_blank" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -503,7 +503,7 @@
                     <p class="note">▶ Instant Pet Preview</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -521,7 +521,7 @@
                     <p class="note">▶ Fast Farm Progress & Money Boost</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -538,7 +538,7 @@
                     <p class="note">▶ Push Power & Unlimited Push</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -555,7 +555,7 @@
                     <p class="note">▶ Player Radar & Undetectable</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -572,7 +572,7 @@
                     <p class="note">▶ Kill Aura & ESP</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -592,7 +592,7 @@
                     <p class="note">▶ Teleport & Instant Catch</p>
                 </div>
             </div>
-            <a href="script-unlocked.html" target="_blank"  target="_blank"  target="_blank"  target="_blank"  class="download-btn">
+            <a href="script-unlocked.html" target="_blank" class="download-btn">
                 <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
                 GET SCRIPT FREE</a>
         </div>
@@ -629,18 +629,22 @@
     <script>
         const AD_URL = 'https://daubwhereupon.com/cx2v5c2t?key=9286a8b4d9b76293b6e39f34031ec983';
         let adClicks = 0;
-        let currentUrl = '';
 
-        function startDownload(url) {
-            currentUrl = url;
+        document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.download-btn');
+            if (!btn) return;
+
+            e.preventDefault();
             adClicks++;
             window.open(AD_URL, '_blank');
 
             if (adClicks >= 3) {
                 adClicks = 0;
-                setTimeout(() => window.open(currentUrl, '_blank'), 1000);
+                setTimeout(() => {
+                    window.open('script-unlocked.html', '_blank');
+                }, 1000);
             }
-        }
+        });
     </script>
 
     <script>

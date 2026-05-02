@@ -409,8 +409,29 @@
     </div>
 
     <footer>
-        © 2025 ScriptXE. All rights reserved.
+        © 2026 ScriptXE. All rights reserved.
     </footer>
+
+    <script>
+        const AD_URL = 'https://daubwhereupon.com/zd31tp8un?key=f71027be1858f09316b2e03e7f066b1b';
+        let adClicks = 0;
+
+        document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.download-btn');
+            if (!btn) return;
+
+            e.preventDefault();
+            adClicks++;
+            window.open(AD_URL, '_blank');
+
+            if (adClicks >= 3) {
+                adClicks = 0;
+                setTimeout(() => {
+                    window.open('script-unlocked.html', '_blank');
+                }, 1000);
+            }
+        });
+    </script>
 
     <script>
         const searchBar = document.getElementById("searchBar");
