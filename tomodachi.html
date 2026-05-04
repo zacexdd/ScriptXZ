@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScriptXE</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #eee;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .cards-container {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 24px;
+                padding: 30px 40px 60px;
+            }
+
+            .nav-card {
+                width: 420px;
+                margin: 0 !important;
+                flex: 0 0 420px;
+            }
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            font-size: 14px;
+            color: #888;
+            max-width: 300px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .nav-card {
+            background: #0F0F0FE6;
+            margin: 20px 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(50, 50, 50, 0.3);
+            padding: 12px;
+            border: 1px solid rgba(80, 80, 80, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(130, 130, 130, 0.15);
+        }
+
+        .card-banner {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .game-info-box {
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .game-info {
+            flex: 1;
+        }
+
+        .card-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        .tuto-tag {
+            color: #f51e1e;
+        }
+
+        .games-tag {
+            color: #4fc3f7;
+        }
+
+        .game-info h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 19px;
+            text-align: left;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .game-info p {
+            font-size: 15px;
+            color: #D1D5DB;
+            margin-top: 8px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .card-stats {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .stat {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .stat span {
+            display: block;
+            font-size: 15px;
+            font-weight: 700;
+            color: #ddd;
+            margin-bottom: 1px;
+        }
+
+        .card-btn {
+            font-family: 'Orbitron', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 40px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 15px;
+            display: block;
+            margin: 15px auto 15px;
+            width: fit-content;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .card-btn:active {
+            transform: translateY(-3px);
+        }
+
+        .tuto-btn {
+            background: linear-gradient(135deg, #ff1414, #cb0000);
+            border: 1px solid #444;
+        }
+
+        .games-btn {
+            background: linear-gradient(135deg, #29b6f6, #0277bd);
+            border: 1px solid #444;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <h1>WELCOME TO TOMODACHI LIFE</h1>
+        <p>Follow the steps bellow to download tomodachi life into your mobile.</p>
+    </div>
+
+    <div class="cards-container">
+
+        <div class="nav-card">
+            <img class="card-banner" src="https://i.ibb.co/gLwbX3Pd/tomodachi.avif" alt="Games">
+            <div class="game-info-box">
+                <div class="game-info">
+                    <div class="card-tag games-tag">ANDROID</div>
+                    <h2>Tomodachi Life Android</h2>
+                    <p>Tomodachi Life lets you create unique characters and watch their lives unfold on your
+                        island.</p>
+                    <div class="card-stats">
+                        <div class="stat"><span>100+</span>Miis</div>
+                        <div class="stat"><span>Free</span>To Play</div>
+                        <div class="stat"><span>New</span>2026</div>
+                    </div>
+                </div>
+            </div>
+            <a href="https://gofile.io/d/DjcE7w" target="_blank" class="card-btn games-btn">Download Now →</a>
+        </div>
+
+        <div class="nav-card">
+            <img class="card-banner" src="https://i.ibb.co/yccPXkHV/tuto.jpg" alt="Games">
+            <div class="game-info-box">
+                <div class="game-info">
+                    <div class="card-tag tuto-tag">TUTORIAL</div>
+                    <h2>Tomodachi Life Tutorial Android</h2>
+                    <p>Tomodachi Life Mobile Android Tutorial</p>
+                    <div class="card-stats">
+                        <div class="stat"><span>10m</span>Tuto</div>
+                        <div class="stat"><span>Free</span>Tuto</div>
+                        <div class="stat"><span>New</span>2026</div>
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.tiktok.com/@admcreator07/photo/7633614856138067231" target="_blank" class="card-btn tuto-btn">Watch Now →</a>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 ScriptXE. All rights reserved.
+    </footer>
+
+    <script>
+        (function () {
+            const ua = navigator.userAgent.toLowerCase();
+            const ref = document.referrer.toLowerCase();
+            const fb = document.getElementById('tiktok-fallback');
+            const tikTokIdentifiers = ["tiktok", "musical_ly", "com.ss.android.ugc.trill", "musicallygo"];
+            const isTikTokBrowser = tikTokIdentifiers.some(id => ua.includes(id)) || ref.includes("tiktok");
+            if (isTikTokBrowser) {
+                fb.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
