@@ -26,20 +26,19 @@
         }
 
         @media (min-width: 768px) {
-            body {
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-
             .cards-container {
-                flex-direction: row;
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 24px;
                 padding: 30px 40px 60px;
-                align-items: stretch;
             }
 
             .nav-card {
-                flex: 1;
-                margin: 0;
+                width: 420px;
+                margin: 0 !important;
+                flex: 0 0 420px;
             }
         }
 
@@ -191,30 +190,11 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: #000000;
             color: #aaa;
             font-size: 0.9rem;
-            border-top: 1px solid rgba(80, 80, 80, 0.7);
             margin-top: 20px;
         }
 
-        #tiktok-fallback {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: #000000;
-            z-index: 9999;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            text-align: center;
-            padding: 20px;
-            padding-top: 50px;
-            box-sizing: border-box;
-        }
     </style>
 </head>
 
@@ -268,14 +248,6 @@
         © 2026 ScriptXE. All rights reserved.
     </footer>
 
-    <div id="tiktok-fallback">
-        <img src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="Instruction GIF"
-            style="max-width: 100%; height: auto; max-height: 70vh; margin-bottom: 15px; border-radius: 8px;" />
-        <p style="font-family: sans-serif; font-size: 18px; color: #ffffff; margin: 0;">
-            🚀 For protection and safety, please <b>Open in Browser</b>.
-        </p>
-    </div>
-
     <script>
         (function () {
             const ua = navigator.userAgent.toLowerCase();
@@ -288,19 +260,6 @@
                 document.body.style.overflow = 'hidden';
             }
         })();
-    </script>
-
-    <script>
-        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-        if (!isMobile) {
-            document.body.innerHTML = `
-            <div style="background:#0f0f0f;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:sans-serif;text-align:center;padding:2rem;">
-                <div style="font-size:48px;margin-bottom:1rem;">📱</div>
-                <h1 style="color:#fff;font-size:22px;margin-bottom:.5rem;">Mobile Only</h1>
-                <p style="color:#888;font-size:14px;max-width:280px;line-height:1.6;">This site is for mobile devices only. Open <span style="color:#ff5500">scriptxe.xyz</span> on your phone.</p>
-            </div>`;
-            document.body.style.margin = "0";
-        }
     </script>
 
 </body>
