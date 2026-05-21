@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScriptXE</title>
+    <title>Novaxz</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@400;500;700&display=swap"
         rel="stylesheet">
@@ -29,16 +29,29 @@
             .cards-container {
                 display: flex !important;
                 flex-direction: row !important;
+                flex-wrap: wrap;
                 justify-content: center;
                 align-items: flex-start;
                 gap: 24px;
                 padding: 30px 40px 60px;
+                overflow-x: hidden;
+                box-sizing: border-box;
             }
 
             .nav-card {
                 width: 420px;
+                max-width: 420px;
+                min-width: 300px;
                 margin: 0 !important;
                 flex: 0 0 420px;
+                box-sizing: border-box;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 900px) {
+            .nav-card {
+                flex: 0 0 100%;
+                max-width: 100%;
             }
         }
 
@@ -208,6 +221,24 @@
     <div class="cards-container">
 
         <div class="nav-card">
+            <img class="card-banner" src="https://fanbolt.b-cdn.net/wp-content/webp-express/webp-images/uploads/2026/03/Tomodachi-800x500.jpg.webp" alt="Games">
+            <div class="game-info-box">
+                <div class="game-info">
+                    <div class="card-tag games-tag">File</div>
+                    <h2>Tomodachi Life iOS File</h2>
+                    <p>Please watch the tutorial below to understand how to download it properly.</p>
+                    <div class="card-stats">
+                        <div class="stat"><span>6.7</span>Gb</div>
+                        <div class="stat"><span>iOS</span>Devices</div>
+                        <div class="stat"><span>New</span>2026</div>
+                    </div>
+                </div>
+            </div>
+            <a href="https://archive.org/download/tomodachi-life-living-the-dream_20260415/Tomodachi%20Life%20Living%20the%20Dream.nsp"
+                target="_blank" class="card-btn games-btn">Download Now →</a>
+        </div>
+
+        <div class="nav-card">
             <img class="card-banner" src="https://i.ibb.co/9H3RKXXB/ios.jpg" alt="Games">
             <div class="game-info-box">
                 <div class="game-info">
@@ -215,14 +246,14 @@
                     <h2>Tomodachi Life Files & Tutorial IOS</h2>
                     <p>You need to watch this tutorial to learn how to download it on iOS devices.</p>
                     <div class="card-stats">
-                        <div class="stat"><span>10m</span>Tuto</div>
+                        <div class="stat"><span>20m</span>Tuto</div>
                         <div class="stat"><span>IOS</span>Devices</div>
                         <div class="stat"><span>New</span>2026</div>
                     </div>
                 </div>
             </div>
-            <a href="https://youtu.be/lZbG5hqGPO4?si=Bqp4Ect7vOezX-ls" target="_blank"
-                class="card-btn tuto-btn">Watch Now →</a>
+            <a href="https://youtu.be/lZbG5hqGPO4?si=Bqp4Ect7vOezX-ls" target="_blank" class="card-btn tuto-btn">Watch
+                Now →</a>
         </div>
 
         <div class="nav-card">
@@ -233,7 +264,7 @@
                     <h2>Tomodachi Life Android Files</h2>
                     <p>Please watch the tutorial below to understand how to download it properly.</p>
                     <div class="card-stats">
-                        <div class="stat"><span>100+</span>Miis</div>
+                        <div class="stat"><span>Game</span>Files</div>
                         <div class="stat"><span>Android</span>Devices</div>
                         <div class="stat"><span>New</span>2026</div>
                     </div>
@@ -250,7 +281,7 @@
                     <h2>Tomodachi Life Tutorial Android</h2>
                     <p>You need to watch this tutorial to learn how to download it on Android devices.</p>
                     <div class="card-stats">
-                        <div class="stat"><span>10m</span>Tuto</div>
+                        <div class="stat"><span>30s</span>Tuto</div>
                         <div class="stat"><span>Android</span>Devices</div>
                         <div class="stat"><span>New</span>2026</div>
                     </div>
@@ -263,7 +294,7 @@
     </div>
 
     <footer>
-        © 2026 ScriptXE. All rights reserved.
+        © 2026 Novaxz. All rights reserved.
     </footer>
 
     <script>
